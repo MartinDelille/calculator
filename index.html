@@ -4,15 +4,56 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>calculator</title>
+    <title>Calculator</title>
     <!-- bower:css -->
     <!-- endbower -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
-    <h1>calculator</h1>
-    <p>What's up?</p>
+    <div class='container'>
+      <h1 class='text-center text-primary'>Calculator</h1>
+      <div id='calc' class='jumbotron'>
+        <div class='row'>
+          <div class='col-xs-12'>
+            <div id='number' class='number text-right'></div>
+          </div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-3'><a class='btn btn-danger' href='#'>AC</a></div>
+          <div class='col-xs-3'><a class='btn btn-danger' href='#'>CE</a></div>
+          <div class='col-xs-3'><a class='btn btn-default op' href='#'>%</a></div>
+          <div class='col-xs-3'><a class='btn btn-default op' href='#'>&#247;</a></div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-3'><a class='btn btn-default nb' href='#'>7</a></div>
+          <div class='col-xs-3'><a class='btn btn-default nb' href='#'>8</a></div>
+          <div class='col-xs-3'><a class='btn btn-default nb' href='#'>9</a></div>
+          <div class='col-xs-3'><a class='btn btn-default op' href='#'>x</a></div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-3'><a class='btn btn-default nb' href='#'>4</a></div>
+          <div class='col-xs-3'><a class='btn btn-default nb' href='#'>5</a></div>
+          <div class='col-xs-3'><a class='btn btn-default nb' href='#'>6</a></div>
+          <div class='col-xs-3'><a class='btn btn-default op' href='#'>-</a></div>
+        </div>
+        <div class='row'>
+          <div class='col-xs-9'>
+            <div class='row'>
+              <div class='col-xs-4'><a class='btn btn-default nb' href='#'>1</a></div>
+              <div class='col-xs-4'><a class='btn btn-default nb' href='#'>2</a></div>
+              <div class='col-xs-4'><a class='btn btn-default nb' href='#'>3</a></div>
+            </div>
+            <div class='row'>
+              <div class='col-xs-4'><a class='btn btn-default nb' href='#'>0</a></div>
+              <div class='col-xs-4'><a class='btn btn-default' href='#'>.</a></div>
+              <div class='col-xs-4'><a class='btn btn-default' href='#'>=</a></div>
+            </div>
+          </div>
+          <div class='col-xs-3'><a class='btn btn-default op' href='#'>+<br/><br/><br/></a></div>
+        </div>
+      </div>
+    </div>
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
