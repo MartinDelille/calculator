@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('serve', ['wiredep', 'jshint', 'htmlhint', 'htmllint', 'csslint', 'bootlint', 'connect:livereload', 'watch']);
 
-  var port = 9000;
+  var port = 5000;
 
   grunt.initConfig({
     connect: {
