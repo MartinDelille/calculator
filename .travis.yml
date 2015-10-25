@@ -2,9 +2,8 @@ language: node_js
 node_js:
 - '0.11'
   #- '0.10'
-before_install: npm install -g grunt-cli selenium-standalone
+before_install: npm install -g grunt grunt-cli selenium-standalone
 install: selenium-standalone install
 before_script: selenium-standalone start &
 script:
-  - ls -l
   - grunt test
