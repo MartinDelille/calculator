@@ -9,8 +9,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-bootlint');
   grunt.loadNpmTasks('grunt-contrib-jade');
+  grunt.loadNpmTasks('grunt-webdriver');
 
-  grunt.registerTask('serve', ['wiredep', 'jshint', 'jade', 'htmlhint', 'htmllint', 'csslint', 'bootlint', 'connect:livereload', 'watch']);
+  grunt.registerTask('serve', ['wiredep', 'jshint', 'jade', 'htmlhint', 'htmllint', 'csslint', 'bootlint', 'connect:livereload', 'webdriver', 'watch']);
 
   var port = 5000;
 
@@ -32,11 +33,11 @@ module.exports = function(grunt) {
       },
       html: {
         files: ['*.html'],
-        tasks: ['htmlhint', 'htmllint', 'bootlint']
+        tasks: ['htmlhint', 'htmllint', 'bootlint', 'webdriver']
       },
       js: {
-        files: ['Gruntfile.js', 'js/*.js'],
-        tasks: ['jshint']
+        files: ['Gruntfile.js', 'js/*.js', 'features/*.js'],
+        tasks: ['jshint', 'webdriver']
       },
       css: {
         files: ['css/*.css'],
@@ -45,6 +46,10 @@ module.exports = function(grunt) {
       jade: {
         files: ['*.jade'],
         tasks: ['jade']
+      },
+      features: {
+        files: ['features/*.feature'],
+        tasks: ['webdriver']
       },
       options: {
         livereload: port + 1,
@@ -106,6 +111,12 @@ module.exports = function(grunt) {
         files: {
           'index.html': 'index.jade'
         }
+      }
+    },
+
+    webdriver: {
+      test: {
+        configFile: './wdio.conf.js'
       }
     }
   });
