@@ -25,7 +25,7 @@ module.exports = function() {
   this.Then(/^it display "([^"]*)" on the calculator screen$/, function (expectedValue, next) {
     browser
     .getText('#number').then(function(value) {
-      assert(value === expectedValue);
+      assert(value === expectedValue, ' result of command is "' + value + '" but should be "' + expectedValue + '"');
     })
     .call(next);
   });};

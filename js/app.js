@@ -45,7 +45,10 @@ $(function() {
     else if(op === '-') {
       lastNumber = lastNumber - number;
     }
-    else {
+    else if(op === 'x') {
+      lastNumber = lastNumber * number;
+    }
+    else if(op === '+') {
       lastNumber = lastNumber + number;
     }
     number = '';
