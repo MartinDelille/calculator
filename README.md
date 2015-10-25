@@ -20,6 +20,6 @@ It uses the following tools:
   - [htmlhint](https://github.com/yaniswang/grunt-htmlhint)
   - [wiredep](http://stephenplusplus.github.io/grunt-wiredep/)
 - [Jade](http://jade-lang.com/)
-- [Cucumber](https://cucumber.io/) for Javascript along with [WebdriverIO](https://cucumber.io/)
+- [Cucumber](https://cucumber.io/) for Javascript along with [WebdriverIO](https://webdriver.io/) and [selenium-standalone](https://github.com/vvo/selenium-standalone)
 
 Hope you like it!
