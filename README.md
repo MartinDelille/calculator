@@ -1,6 +1,8 @@
 Calculator
 ==========
 
+[![Build Status](https://travis-ci.org/MartinDelille/calculator.svg?branch=master)](https://travis-ci.org/MartinDelille/calculator) [![Coverage Status](https://coveralls.io/repos/MartinDelille/calculator/badge.svg?branch=master)](https://coveralls.io/r/MartinDelille/calculator?branch=master) [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/MartinDelille/calculator?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 This is a simple calculator application that I made during this following [FreeCodeCamp challenge](http://www.freecodecamp.com/challenges/zipline-build-a-javascript-calculator).
 
 It uses the following tools:
