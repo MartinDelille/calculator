@@ -6,6 +6,10 @@
     "test": "grunt test"
   },
   "author": "Martin Delille (martin@phonations.com)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinDelille/calculator.git"
+  },
   "license": "ISC",
   "dependencies": {
     "cucumber": "^0.7.0",
