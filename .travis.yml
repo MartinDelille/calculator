@@ -3,9 +3,9 @@ node_js:
 - '0.11'
   #- '0.10'
 before_install: npm install -g grunt grunt-cli selenium-standalone
-install: selenium-standalone install
+install:
+  - npm install
+  - selenium-standalone install
 before_script: selenium-standalone start &
 script:
-  - ls -l
-  - ls -l node_modules
   - grunt test
