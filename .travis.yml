@@ -6,5 +6,5 @@ before_install: npm install -g grunt grunt-cli selenium-standalone
 install: selenium-standalone install
 before_script: selenium-standalone start &
 script:
-  - ls -l node_components
+  - ls -l node_modules
   - grunt test
