@@ -11,7 +11,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jade');
   grunt.loadNpmTasks('grunt-webdriver');
 
-  grunt.registerTask('serve', ['wiredep', 'jshint', 'jade', 'htmlhint', 'htmllint', 'csslint', 'bootlint', 'connect:livereload', 'webdriver', 'watch']);
+  grunt.registerTask('build', ['wiredep', 'jade']);
+  grunt.registerTask('lint', ['jshint', 'htmlhint', 'htmllint', 'csslint', 'bootlint']);
+  grunt.registerTask('serve', ['build', 'lint', 'connect:livereload', 'webdriver', 'watch']);
+  grunt.registerTask('test', ['build', 'lint', 'connect:test', 'webdriver']);
 
   var port = 5000;
 
@@ -22,6 +25,11 @@ module.exports = function(grunt) {
           port: port,
           open: true,
           livereload: port + 1
+        }
+      },
+      test: {
+        options: {
+          port: port
         }
       }
     },
