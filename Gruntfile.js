@@ -17,6 +17,9 @@ module.exports = function(grunt) {
   grunt.registerTask('test', ['build', 'lint', 'connect:test', 'webdriver']);
 
   var port = 5000;
+  var jsFiles = ['Gruntfile.js', 'js/*.js', 'features/*.js'];
+  var htmlFiles = ['*.html'];
+  var cssFiles = ['css/*.css'];
 
   grunt.initConfig({
     connect: {
@@ -40,12 +43,12 @@ module.exports = function(grunt) {
         tasks: ['wiredep']
       },
       html: {
-        files: ['*.html'],
-        tasks: ['htmlhint', 'htmllint', 'bootlint', 'webdriver']
+        files: htmlFiles,
+        tasks: ['htmlhint', 'htmllint', 'bootlint']
       },
       js: {
-        files: ['Gruntfile.js', 'js/*.js', 'features/*.js'],
-        tasks: ['jshint', 'webdriver']
+        files: jsFiles,
+        tasks: ['jshint']
       },
       css: {
         files: ['css/*.css'],
@@ -74,10 +77,7 @@ module.exports = function(grunt) {
     },
 
     jshint: {
-      options: {
-        force: true
-      },
-      all: ['Gruntfile.js', 'js/*.js']
+      all: jsFiles
     },
 
     htmlhint: {
@@ -85,30 +85,20 @@ module.exports = function(grunt) {
         options: {
           "tag-pair": true
         },
-        src: ['*.html']
+        src: htmlFiles
       }
     },
 
     htmllint: {
-      all: {
-        options: {
-          force: true
-        },
-        src: ['*.html']
-      }
+      all: htmlFiles
     },
 
     csslint: {
-      all: {
-        src: ['css/*.css']
-      }
+      all: cssFiles
     },
 
     bootlint: {
-      options: {
-        stoponerror: false,
-      },
-      files: ['*.html']
+      src: htmlFiles
     },
 
     jade: {
