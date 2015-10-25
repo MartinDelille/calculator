@@ -7,6 +7,6 @@ install:
   - npm install
   - bower install
   - selenium-standalone install
-before_script: selenium-standalone start > /dev/null 2> &1 &
+before_script: selenium-standalone start > /dev/null 2>&1 &
 script:
   - grunt test
