@@ -2,7 +2,7 @@ Feature: Calculator
   As a bad mathematician
   I want to use this app for calculation
 
-  Scenario: Perform simple digit input
+  Scenario: Check the title
     Given I am going to the website "/"
     Then the title is "Calculator"
 

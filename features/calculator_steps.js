@@ -28,4 +28,5 @@ module.exports = function() {
       assert(value === expectedValue, ' result of command is "' + value + '" but should be "' + expectedValue + '"');
     })
     .call(next);
-  });};
+  });
+};
