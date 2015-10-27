@@ -1,0 +1,23 @@
+/* app.css */
+
+.container {
+  width: 360px;
+}
+
+.container .jumbotron {
+  padding: 40px 30px 30px;
+}
+
+.number {
+  background-color: #ff8;
+  color: black;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin: 8px 0;
+}
+
+.container .btn {
+  margin: 4px 0;
+  width: 50px;
+}
